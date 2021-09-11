@@ -1,20 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from 'next'
 import { useSelector, useDispatch } from "react-redux";
+import BoxListen from '../containers/BoxListen';
 import { InitialState } from '../store/types';
-// import { RootState } from '../store/reducer';
-
+import * as S from '../styles/Home'
 
 const Home: NextPage = () => {
   let survivors = useSelector((state: InitialState) => state.survivors);
 
   return (
-    <div>
-      {survivors.map((s, i) => (
-        <div key={i}>
-          {s.fullName}
-        </div>
-      ))}
-    </div>
+    <S.Container>
+      <img src="/images/logo.svg" alt="logo zombie game" />
+      <BoxListen />
+    </S.Container>
   )
 }
 
