@@ -7,7 +7,7 @@ const initialState: InitialState = {
     {
       id: 0,
       fullName: 'Leonardo Marco',
-      avatar: 'note',
+      avatar: '/images/persona-one.svg',
       age: 24,
       description: 'Saint Louis',
       infected: false,
@@ -15,17 +15,17 @@ const initialState: InitialState = {
     {
       id: 0,
       fullName: 'Jhon Jones',
-      avatar: 'note',
+      avatar: '/images/persona-one.svg',
       age: 24,
       description: 'Saint Louis',
-      infected: false,
+      infected: true,
     },
   ],
   filtered: [
     {
       id: 0,
       fullName: 'Junior Santos',
-      avatar: 'note',
+      avatar: '/images/persona-one.svg',
       age: 24,
       description: 'Saint Louis',
       infected: false,

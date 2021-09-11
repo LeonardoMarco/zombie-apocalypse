@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "test": "jest --env=jsdom",
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
     "next": "11.1.2",
     "next-redux-wrapper": "^7.0.4",
     "react": "17.0.2",
@@ -23,6 +26,7 @@
     "@babel/core": "^7.15.5",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
+    "@testing-library/user-event": "^13.2.1",
     "@types/jest": "^27.0.1",
     "@types/react": "17.0.20",
     "@types/styled-components": "^5.1.14",
