@@ -10,8 +10,12 @@ import { InitialState } from '../../store/types'
 import {
   changeInputSearch,
   changeSelectSearch,
+  closeModalDetail,
   fetchPersonas,
+  openModalDetail,
+  changePersona
 } from '../../store/actions'
+import ModalDetail from '../../components/ModalDetail'
 
 const BoxListen: React.FC = () => {
   const state = useSelector((state: InitialState) => state)
@@ -20,9 +24,10 @@ const BoxListen: React.FC = () => {
   const changeInput = (value: string) => dispatch(changeInputSearch(value))
   const changeSelect = (value: string) => dispatch(changeSelectSearch(value))
 
-  function selectDetailPersona(id: number) {
-    console.log(id)
-  }
+  const selectDetailPersona = (id: number) => dispatch(openModalDetail(id))
+  
+  const closeModal = () => dispatch(closeModalDetail())
+  const changePersonaHandle = (id: number) => dispatch(changePersona(id))
 
   useEffect(() => {
     dispatch(fetchPersonas())
@@ -32,6 +37,12 @@ const BoxListen: React.FC = () => {
     <S.Container>
       <SearchGroup onChangeInput={changeInput} onChangeSelect={changeSelect} />
       <Card dataPersonas={state.filtered} actionDetail={selectDetailPersona} />
+      <ModalDetail
+        open={state.openModal}
+        persona={state.modalInfo}
+        closeModal={closeModal}
+        changePersona={changePersonaHandle}
+      />
     </S.Container>
   )
 }
