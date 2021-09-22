@@ -16,18 +16,27 @@ export const Input = styled.input`
   padding: 10px;
   width: 80%;
   border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #585858;
 
   &:focus {
     outline: none;
+  }
+
+  &::placeholder {
+    color: #585858;
   }
 `
 
 export const Select = styled.select`
   background: #6A723C;
-  padding: 9px;
+  padding: 10.5px;
   color: #CCC6C6;
   width: 20%;
   border: none;
+  text-align: center;
+  
 
   &:focus {
     outline: none;

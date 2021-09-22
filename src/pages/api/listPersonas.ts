@@ -4,42 +4,42 @@ import { Personas } from '../../store/types'
 const PERSONAS = [
   {
     "id": 1,
-    "fullName": "Leonardo Marco",
+    "fullName": "Leonardo",
     "avatar": "/images/persona-one.svg",
     "age": 24,
-    "description": "Saint Louis",
+    "description": "born and raised in Santa Luzia",
     "infected": false
   },
   {
     "id": 2,
-    "fullName": "Leonardo Marco 2",
-    "avatar": "/images/persona-one.svg",
-    "age": 24,
-    "description": "Saint Louis",
+    "fullName": "Nobis",
+    "avatar": "/images/persona-two.svg",
+    "age": 32,
+    "description": "nobis is a beast",
     "infected": false
   },
   {
     "id": 3,
-    "fullName": "Leonardo Marco 3",
-    "avatar": "/images/persona-one.svg",
-    "age": 24,
-    "description": "Saint Louis",
+    "fullName": "Moloezi",
+    "avatar": "/images/persona-three.svg",
+    "age": 40,
+    "description": "Moloezi was not so lucky in life",
     "infected": true
   },
   {
     "id": 4,
-    "fullName": "Leonardo Marco 4",
-    "avatar": "/images/persona-one.svg",
-    "age": 24,
-    "description": "Saint Louis",
+    "fullName": "Zeuss",
+    "avatar": "/images/persona-four.svg",
+    "age": 29,
+    "description": "Zeuss is the best warrior of the lost city",
     "infected": false
   },
   {
     "id": 5,
-    "fullName": "Leonardo Marco 5",
-    "avatar": "/images/persona-one.svg",
-    "age": 24,
-    "description": "Saint Louis",
+    "fullName": "Beuno",
+    "avatar": "/images/persona-five.svg",
+    "age": 75,
+    "description": "Beuno is the sage of the lost land",
     "infected": false
   }
 ]

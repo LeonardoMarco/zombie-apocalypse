@@ -3,6 +3,7 @@ import { Personas } from '../../store/types'
 import * as S from './styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+
 interface Props {
   dataPersonas: Personas[]
   actionDetail: (id: number) => void

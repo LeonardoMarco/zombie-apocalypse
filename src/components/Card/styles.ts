@@ -34,5 +34,6 @@ export const Infos = styled.div`
 export const Detail = styled.button`
   cursor: pointer;
   background: none;
-  border: none; 
+  border: none;
+  color: #585858;
 `

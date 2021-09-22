@@ -22,10 +22,23 @@ export const ModalClose = styled.div`
 
 export const Modal = styled.div`
   background: #7a8258;
-  width: 20%;
+  width: 25%;
   margin: 50px auto;
   border-radius: 5px;
   padding: 20px;
+
+  @media screen and (max-width: 460px) {
+    width: 85%;
+  }
+  
+  @media screen and (min-width: 461px) and (max-width: 769px) {
+    width: 50%;
+  }
+  
+  @media screen and (min-width: 770px) and (max-width: 1260px) {
+    width: 30%;
+  }
+
 `
 
 export const Row = styled.div`

@@ -14,7 +14,7 @@ const SearchGroup: React.FC<Props> = ({ onChangeInput, onChangeSelect }) => {
       <S.Input
         type='text'
         onChange={(e) => onChangeInput(e.target.value)}
-        placeholder='Search...'
+        placeholder='Search personas...'
         id='search'
       />
       <S.Select onChange={(e) => onChangeSelect(e.target.value)} data-testid="select">
