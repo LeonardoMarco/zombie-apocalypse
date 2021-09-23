@@ -2,11 +2,12 @@
 ![Image app](./public/images/app.png)
 [Figma layout](https://www.figma.com/file/T9ESMRd4N2UrRX5pL07xzo/Zombie-game?node-id=0%3A1)
 
-<hr />
+
 #### Description
 This project is a list of survivors of the apocalypse, where we can save or infect the people on that list.
 
 <hr />
+
 #### Stack
 - Typescript
 - Next.js
@@ -15,6 +16,7 @@ This project is a list of survivors of the apocalypse, where we can save or infe
 - Redux
 
 <hr />
+
 #### Install packages
 
 ```
@@ -27,6 +29,8 @@ or
 npm install
 ```
 
+<hr />
+
 #### Run project
 
 ```
@@ -38,6 +42,8 @@ or
 ```
 npm run dev
 ```
+
+<hr />
 
 #### Test project
 
