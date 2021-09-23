@@ -1,10 +1,24 @@
 import { HYDRATE } from "next-redux-wrapper"
-import { AnyAction } from "redux"
-import { CHANGE_INPUT_SEARCH, FETCH_PERSONAS, CHANGE_SELECT_SEARCH, InitialState, OPEN_MODAL_DETAIL, CLOSE_MODAL_DETAIL, CHANGE_PERSONA } from "./types"
+import { Reducer } from "redux"
+import { CHANGE_INPUT_SEARCH, FETCH_PERSONAS, CHANGE_SELECT_SEARCH, InitialState, OPEN_MODAL_DETAIL, CLOSE_MODAL_DETAIL, CHANGE_PERSONA, Personas } from "./types"
 
 const initialState: InitialState = {
-  survivors: [],
-  filtered: [],
+  survivors: [{
+    id: 0,
+    fullName: "",
+    avatar: "/images/persona-one.svg",
+    age: 0,
+    description: "",
+    infected: false
+  }],
+  filtered: [{
+    id: 0,
+    fullName: "",
+    avatar: "/images/persona-one.svg",
+    age: 0,
+    description: "",
+    infected: false
+  }],
   searchText: "",
   searchType: "all",
   openModal: false,
@@ -47,7 +61,7 @@ function filterPersonas(state: InitialState) {
 
 }
 
-const reducer = (state = initialState, action: AnyAction) => {
+const reducer: Reducer = (state = initialState, action) => {
   switch (action.type) {
     case HYDRATE:
       return { ...state }
@@ -71,7 +85,7 @@ const reducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         openModal: true,
-        modalInfo: state.survivors.find(s => s.id === action.id)
+        modalInfo: state.survivors.find((s: Personas) => s.id === action.id)
       }
     case CLOSE_MODAL_DETAIL:
       return {
@@ -79,7 +93,7 @@ const reducer = (state = initialState, action: AnyAction) => {
         openModal: false,
       }
     case CHANGE_PERSONA:
-      const position = state.survivors.findIndex(s => s.id === action.id)
+      const position = state.survivors.findIndex((s: Personas) => s.id === action.id)
       const newSurvivors = state.survivors
 
       newSurvivors[position].infected = !newSurvivors[position].infected
@@ -87,7 +101,7 @@ const reducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         survivors: newSurvivors,
-        modalInfo: newSurvivors.find(s => s.id === action.id),
+        modalInfo: newSurvivors.find((s: Personas) => s.id === action.id),
       }
     default:
       return state
